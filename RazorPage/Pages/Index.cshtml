@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <input type="button" id="btnS" value="S"/>
+    <partial name="_partialDemo" />
+    @await Html.PartialAsync("_partialDemo")
+    <input type="file" multiple="true" onchange="xulyfile()" name="f1">
+    <span id="txtfile"></span>
+   
+
+<script>
+function xulyfile(){
+    var arr = event.target.files;
+    var filetext = $("#txtfile").text();
+    console.dir(arr);
+    for(i=0; i<arr.length; i++){
+        f = arr[i];
+        console.log( f.name, f.size, f.type );
+                filetext = filetext + "<br>" + f.name;
+                $("#txtfile").text(filetext);
+    }
+}
+</script>
+</div>
