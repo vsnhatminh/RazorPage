@@ -5,5 +5,5 @@
 
 $('#btnS').click(function () {
     alert('cong hoa xa hoi chu nghia viet nam');
-    alert('cong hoa xa hoi chu nghia viet nam 1');
+    alert('cong hoa xa hoi chu nghia viet nam 2');
     });
